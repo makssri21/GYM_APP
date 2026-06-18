@@ -10,5 +10,8 @@ class Config:
         "Trusted_Connection=yes;"
     )
 
-    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=" + params
+    SQLALCHEMY_DATABASE_URI = (
+        "mssql+pyodbc:///?odbc_connect=" + params
+    )
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False

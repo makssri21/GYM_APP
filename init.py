@@ -1,10 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from config import Config
 
 db = SQLAlchemy()
@@ -17,5 +13,8 @@ def create_app():
 
     db.init_app(app)
     migrate.init_app(app, db)
+
+    from models.Users import Users  # noqa: F401
+    from models.Roles import Roles  # noqa: F401
 
     return app

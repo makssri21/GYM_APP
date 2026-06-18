@@ -5,11 +5,10 @@ class Roles(db.Model):
 
     IDRoles = db.Column(db.Integer, primary_key=True)
     RoleName = db.Column(db.String(32))
-    
+
     @property
     def serialize(self):
         return {
             'id': self.IDRoles,
             'name': self.RoleName
-            
         }
