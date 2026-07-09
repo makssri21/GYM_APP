@@ -1,0 +1,32 @@
+.footer-copyright {
+  color: white;
+  font-size: 13px;
+}
+
+.footer-copyright a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+html {
+
+  scroll-behavior: smooth;
+}
+
+.form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+.page-footer {
+  background-color: #d4141a;
+}

@@ -1,6 +1,8 @@
 from init import db
+from flask_login import UserMixin
 
-class Users(db.Model):
+
+class Users(UserMixin, db.Model):
     __tablename__ = 'users'
 
     IDUser = db.Column(db.Integer, primary_key=True)
@@ -12,6 +14,9 @@ class Users(db.Model):
     IsActive = db.Column(db.Integer)
 
     role = db.relationship('Roles', backref='users')
+
+    def get_id(self):
+        return str(self.IDUser)
     
     @property
     def serialize(self):

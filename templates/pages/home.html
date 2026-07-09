@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="clientsTableContainer" class="table-wrapper mt-2" >
+          <table class="table table-striped table-clients" style="border-collapse: collapse;">
+            <thead class="sticky-header">
+              <tr>
+                <th style="width: 25%" ;>Naziv klijenta</th>
+                <th style="width: 25%" ;>Kod klijenta</th>
+                <th style="width: 25%" ;>JMBG / JIB</th>
+                <th style="width: 25%" ;>Izaberi klijenta</th>
+              </tr>
+            </thead>
+            <tbody id="clientsTableBody"></tbody>
+          </table>
+        </div>
+{% endblock %}
