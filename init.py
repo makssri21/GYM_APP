@@ -22,7 +22,7 @@ def create_app():
     from models.Roles import Roles
     from models.Users import Users
     from models.RequestStatuses import RequestStatuses
-
+    from models.Requests import Requests
     @login_manager.user_loader
     def load_user(user_id):
         return db.session.get(Users, int(user_id))

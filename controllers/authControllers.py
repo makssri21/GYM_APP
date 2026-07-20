@@ -40,7 +40,7 @@ def login():
 
 
         # ROLE REDIRECT
-        if user.RoleId == 1:
+        if user.RoleId == 2:
             return redirect(url_for("user.home"))
         else:
             return redirect(url_for("admin.admin_dashboard"))
